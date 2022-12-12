@@ -1,5 +1,20 @@
-import states
-import cities
+
+states = {
+    'Oregon': 'OR',
+    'Florida': 'FL',
+    'California': 'CA',
+    'New York': 'NY',
+    'Michigan': 'MI',
+}
+
+cities = {
+    'CA': 'San Francisco',
+    'MI': 'Detroit',
+    'FL': 'Jacksonville',
+}
+
+cities['NY'] = 'New York'
+cities['OR'] = 'Portland'
 
 print('-' * 10)
 print('NY state has: ', cities['NY'])
@@ -33,7 +48,7 @@ if not state:
     print('Sorry, Texas doesn\'t qualify')
 
 cities = city.get('TX', 'does not exist')
-print('The city for the state \'TX\' is: {city}')
+print("The city for the state 'TX' is: {city}")
 
 
 
