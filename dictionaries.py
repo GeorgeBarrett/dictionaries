@@ -1,4 +1,4 @@
-
+# a list of states
 states = {
     'Oregon': 'OR',
     'Florida': 'FL',
@@ -7,16 +7,20 @@ states = {
     'Michigan': 'MI',
 }
 
+# a list of cities
 cities = {
     'CA': 'San Francisco',
     'MI': 'Detroit',
     'FL': 'Jacksonville',
 }
 
+# i can add new cities like so
 cities['NY'] = 'New York'
 cities['OR'] = 'Portland'
 
 print('-' * 10)
+
+# I am calling the cities and then NY. The parantheses are important 
 print('NY state has: ', cities['NY'])
 print('OR state has: ', cities['OR'])
 
@@ -29,17 +33,23 @@ print('Michigan has: ', cities[states['Michigan']])
 print('Florida has :', cities[states['Florida']])
 
 print('-' * 10)
+# this loops through the items in 'states' and will list them
 for state, abbreviation in list(states.items()):
+    # this prints the state and its abbreviation
     print(f'{state} is abbreviated {abbreviation}')
 
 print('-' * 10)
+# this loops through the items within 'cities' and will list them
 for abbreviation, city in list (cities.items()):
     print(f'{abbreviation} has the city {city}')
 
 print('-' * 10)
+# this loops through the items in 'states' and will list them
 for state, abbreviation in list (states.items()):
-    print(f'{state} is abbreviated {abbreviation}')
-    print(f'and has city {cities[abbreviation]}')
+    # each state will be printed with its abbreviation  
+    print(f'{state} is abbreviated to {abbreviation}')
+    # each city will be printed
+    print(f'and has a city named {cities[abbreviation]}') # {cities[abbreviation]} ? 
 
 print('-' * 10)
 state = states.get('Texas')
@@ -47,8 +57,8 @@ state = states.get('Texas')
 if not state:
     print('Sorry, Texas doesn\'t qualify')
 
-cities = city.get('TX', 'does not exist')
-print("The city for the state 'TX' is: {city}")
+city = cities.get('TX', 'does not exist')
+print(f"The city for the state 'TX' is: {city}")
 
 
 
