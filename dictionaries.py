@@ -52,11 +52,14 @@ for state, abbreviation in list (states.items()):
     print(f'and has a city named {cities[abbreviation]}') # {cities[abbreviation]} ? 
 
 print('-' * 10)
+# this variable is searching through 'states' and tring to get Texas
 state = states.get('Texas')
 
+# if the state variable proves false then the print message will appear
 if not state:
     print('Sorry, Texas doesn\'t qualify')
 
+# this is similar logic to the variable above par the print message uses an f string
 city = cities.get('TX', 'does not exist')
 print(f"The city for the state 'TX' is: {city}")
 
